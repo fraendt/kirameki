@@ -12,7 +12,7 @@ services:
       MYSQL_DATABASE: mysql
       MYSQL_USER: kirameki
       MYSQL_PASSWORD: kiramekipassword
-    port: 
+    ports: 
       - 3306:3306
 
   adminer:
