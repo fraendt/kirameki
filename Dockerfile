@@ -12,12 +12,7 @@ RUN apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python
 RUN python3 -m ensurepip
 RUN pip3 install --no-cache --upgrade pip setuptools
 
-RUN apk add libtool
-RUN apk add autoconf
-RUN apk add automake
-RUN apk add gcc
-RUN apk add g++
-RUN apk add make
+RUN apk add autoconf automake gcc g++ libtool make
 RUN apk add git
 
 RUN apk add \
@@ -39,8 +34,8 @@ RUN apk add \
 # set up 
 WORKDIR /kirameki
 COPY package*.json ./
-COPY . .
+
 RUN npm install
-# --legacy-peer-deps
+COPY . .
 
 CMD ["node", "index.js"]
