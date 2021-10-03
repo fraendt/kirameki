@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class BirthdaySystemMuter {
     constructor() {
@@ -68,4 +68,4 @@ class BirthdaySystemMuter {
     }
 }
 
-module.exports = new BirthdaySystemMuter();
+export default new BirthdaySystemMuter();

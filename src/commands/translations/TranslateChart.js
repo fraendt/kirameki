@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class TranslateChart {
     constructor() {
@@ -23,4 +23,4 @@ class TranslateChart {
     }
 }
 
-module.exports = new TranslateChart();
+export default new TranslateChart();

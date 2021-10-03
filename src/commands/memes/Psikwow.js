@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class Psikwow {
     constructor() {
@@ -23,4 +23,4 @@ class Psikwow {
     }
 }
 
-module.exports = new Psikwow();
+export default new Psikwow();

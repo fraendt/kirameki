@@ -1,8 +1,8 @@
-const KiramekiHelper    = require('../../KiramekiHelper');
-const countrynames      = require('countrynames');
-const chalk             = require('chalk');
-const ojsama            = require('ojsama');
-const uniqid            = require('uniqid');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import countrynames from 'countrynames';
+import chalk from 'chalk';
+import ojsama from 'ojsama';
+import uniqid from 'uniqid';
 
 class OsuRecent {
     constructor() {
@@ -222,4 +222,4 @@ class OsuRecent {
     }
 }
 
-module.exports = new OsuRecent();
+export default new OsuRecent();

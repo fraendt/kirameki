@@ -1,5 +1,5 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const uniqid = require('uniqid');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import uniqid from 'uniqid';
 
 class SetWeather {
     constructor() {
@@ -51,4 +51,4 @@ class SetWeather {
     }
 }
 
-module.exports = new SetWeather();
+export default new SetWeather();

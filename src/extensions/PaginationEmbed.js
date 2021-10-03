@@ -1,4 +1,4 @@
-const ReactionHandler = require('./ReactionHandler');
+import ReactionHeader from './ReactionHandler.js';
 
 class PaginationEmbed {
     constructor(message, pages = [], options = {}) {
@@ -120,7 +120,7 @@ class PaginationEmbed {
     }
 }
 
-module.exports = async (message, pages, options) => {
+export default async (message, pages, options) => {
     const paginationEmbed = new PaginationEmbed(message, pages, options);
     await paginationEmbed.initialize();
     paginationEmbed.run();

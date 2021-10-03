@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class UpdateKiramekiUser {
     constructor() {
@@ -25,4 +25,4 @@ class UpdateKiramekiUser {
     }
 }
 
-module.exports = new UpdateKiramekiUser();
+export default new UpdateKiramekiUser();

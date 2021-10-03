@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class SpaceChannel {
     constructor() {
@@ -26,4 +26,4 @@ class SpaceChannel {
     }
 }
 
-module.exports = new SpaceChannel();
+export default new SpaceChannel();

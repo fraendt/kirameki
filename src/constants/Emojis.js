@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     OSU: {
         BEST_PLAYS: {
             FIRST: '<:yachty_osu_1:451008857242861588>',

@@ -1,24 +1,24 @@
-const KiramekiConfig = require('../config/KiramekiConfig');
-const KiramekiLinks = require('./constants/Links');
-const KiramekiCategories = require('./constants/Categories');
-const KiramekiLogLevels = require('./constants/LogLevels');
-const KiramekiEmojis = require('./constants/Emojis');
-const KiramekiOther = require('./constants/Other');
-const KiramekiReactionHandler = require('./extensions/ReactionHandler');
-const KiramekiPaginationEmbed = require('./extensions/PaginationEmbed');
-const KiramekiImages = require('./constants/Images');
-const chalk = require('chalk');
-const fs = require('fs');
-const fetch = require('node-fetch');
-const Embed = require('./extensions/Embed');
-const ojsama = require('./extensions/OjsamaPlus');
-const md5 = require('md5');
-const Taihou = require('taihou');
-const ud = require('urban');
-const cheerio = require('cheerio');
-const axios = require('axios');
-const tesseract = require('node-tesseract');
-const uniqid = require('uniqid');
+import KiramekiConfig from '../config/KiramekiConfig.js';
+import KiramekiLinks from './constants/Links.js';
+import KiramekiCategories from './constants/Categories.js';
+import KiramekiLogLevels from './constants/LogLevels.js';
+import KiramekiEmojis from './constants/Emojis.js';
+import KiramekiOther from './constants/Other.js';
+import KiramekiReactionHandler from './extensions/ReactionHandler.js';
+import KiramekiPaginationEmbed from './extensions/PaginationEmbed.js';
+import KiramekiImages from './constants/Images.js';
+import chalk from 'chalk';
+import fs from 'fs';
+import fetch from 'node-fetch';
+import Embed from './extensions/Embed.js';
+import * as ojsama from './extensions/OjsamaPlus.js';
+import md5  from 'md5';
+import Taihou from 'taihou';
+import ud from 'urban';
+import cheerio from 'cheerio';
+import axios from 'axios';
+import tesseract from 'node-tesseract';
+import uniqid from 'uniqid';
 
 /**
  * Helper class for Kirameki.
@@ -34,7 +34,7 @@ class KiramekiHelper {
         this.categories = KiramekiCategories;
         this.reactionHandler = KiramekiReactionHandler;
         this.PaginationEmbed = KiramekiPaginationEmbed;
-        this.weebSH = new Taihou(KiramekiConfig.weebSHApiKey, true, { userAgent: KiramekiConfig.userAgent });
+        this.weebSH = null; // new Taihou(KiramekiConfig.weebSHApiKey, true, { userAgent: KiramekiConfig.userAgent });
     }
 
     /**
@@ -986,11 +986,15 @@ class KiramekiHelper {
      */
     preparedQuery(database, userQuery, bindings) {
         return new Promise((resolve, reject) => {
+            console.log("db query promise start")
+            console.log(userQuery)
+            console.log(bindings)
             database.query(userQuery, bindings, (error, results, field) => {
                 if (error) {
+                    console.log(error);
                     reject(error);
                 }
-
+                console.log("resolved promise")
                 resolve(results);
             });
         });
@@ -1097,6 +1101,7 @@ class KiramekiHelper {
             console.log(chalk.green.bold(`[ ${this.currentTime()} ] [ ${label} ] `) + text);
         } else if (level === 2) {
             console.log(chalk.red.bold(`[ ${this.currentTime()} ] [ ${label} ] `) + text);
+            console.trace()
         } else if (level === 3) {
             if (!KiramekiConfig.debug) return;
             console.log(chalk.magenta.bold(`[ ${this.currentTime()} ] [ ${label} ] `) + text);
@@ -1104,4 +1109,5 @@ class KiramekiHelper {
     }
 }
 
-module.exports = new KiramekiHelper();
+// export let KiramekiHelperInstance = new KiramekiHelper();
+export default new KiramekiHelper();

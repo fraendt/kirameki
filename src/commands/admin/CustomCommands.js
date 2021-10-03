@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class CustomCommandsHandler {
     constructor() {
@@ -171,4 +171,4 @@ class CustomCommandsHandler {
     }
 }
 
-module.exports = new CustomCommandsHandler();
+export default new CustomCommandsHandler();

@@ -1,5 +1,5 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const KiramekiConfig = require('../../../config/KiramekiConfig');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import KiramekiConfig from '../../../config/KiramekiConfig.js';
 
 class WeebSlap {
     constructor() {
@@ -69,4 +69,4 @@ class WeebSlap {
     }
 }
 
-module.exports = new WeebSlap();
+export default new WeebSlap();

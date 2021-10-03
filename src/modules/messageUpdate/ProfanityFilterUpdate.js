@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class ProfanityFilterUpdate {
     constructor() {
@@ -29,4 +29,4 @@ class ProfanityFilterUpdate {
     }
 }
 
-module.exports = new ProfanityFilterUpdate();
+export default new ProfanityFilterUpdate();

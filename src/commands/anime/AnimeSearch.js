@@ -1,5 +1,5 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const kitsu = require('node-kitsu');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import kitsu from 'node-kitsu';
 
 class AnimeSearch {
     constructor() {
@@ -74,4 +74,4 @@ class AnimeSearch {
     }
 }
 
-module.exports = new AnimeSearch();
+export default new AnimeSearch();

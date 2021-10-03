@@ -1,6 +1,6 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const Canvas = require('canvas');
-const uniqid = require('uniqid');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import Canvas from 'canvas';
+import uniqid from 'uniqid';
 
 class Trump {
     constructor() {
@@ -48,4 +48,4 @@ class Trump {
 }
 
 
-module.exports = new Trump();
+export default new Trump();

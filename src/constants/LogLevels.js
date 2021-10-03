@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     EVENT: 0,
     COMMAND: 1,
     ERROR: 2,

@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class Coinflip {
     constructor() {
@@ -34,4 +34,4 @@ class Coinflip {
     }
 }
 
-module.exports = new Coinflip();
+export default new Coinflip();

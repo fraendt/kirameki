@@ -1,5 +1,5 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const ojsama = require('ojsama');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import ojsama from 'ojsama';
 
 class OsuRecommend {
     constructor() {
@@ -151,4 +151,4 @@ class OsuRecommend {
     }
 }
 
-module.exports = new OsuRecommend();
+export default new OsuRecommend();

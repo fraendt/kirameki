@@ -1,6 +1,6 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const countrynames = require('countrynames');
-const _ = require('lodash');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import countrynames from 'countrynames';
+import * as _ from 'lodash';
 
 class OsuCompare {
     constructor() {
@@ -152,4 +152,4 @@ class OsuCompare {
     }
 }
 
-module.exports = new OsuCompare();
+export default new OsuCompare();

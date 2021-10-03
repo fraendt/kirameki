@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class Meme {
     constructor() {
@@ -29,4 +29,4 @@ class Meme {
     }
 }
 
-module.exports = new Meme();
+export default new Meme();

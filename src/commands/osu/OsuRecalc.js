@@ -1,5 +1,5 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const ojsama = require('ojsama');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import ojsama from 'ojsama';
 
 class OsuRecalc {
     constructor() {
@@ -104,4 +104,4 @@ class OsuRecalc {
     }
 }
 
-module.exports = new OsuRecalc();
+export default new OsuRecalc();

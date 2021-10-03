@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class ImageSearch {
     constructor() {
@@ -52,4 +52,4 @@ class ImageSearch {
     }
 }
 
-module.exports = new ImageSearch();
+export default new ImageSearch();

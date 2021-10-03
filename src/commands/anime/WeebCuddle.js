@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class WeebCuddle {
     constructor() {
@@ -63,4 +63,4 @@ class WeebCuddle {
     }
 }
 
-module.exports = new WeebCuddle();
+export default new WeebCuddle();

@@ -1,9 +1,9 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const getUrls = require('get-urls');
-const uniqid = require('uniqid');
-const jimp = require('jimp');
-const stringSimilarity = require('string-similarity');
-const countrynames = require('countrynames');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import getUrls from 'get-urls';
+import uniqid from 'uniqid';
+import jimp from 'jimp';
+import stringSimilarity from 'string-similarity';
+import countrynames from 'countrynames';
 
 class OsuScoreScreensOCR {
     constructor() {
@@ -152,4 +152,4 @@ class OsuScoreScreensOCR {
     }
 }   
 
-module.exports = new OsuScoreScreensOCR();
+export default new OsuScoreScreensOCR();

@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class Avatar {
     constructor() {
@@ -48,4 +48,4 @@ class Avatar {
     }
 }
 
-module.exports = new Avatar();
+export default new Avatar();

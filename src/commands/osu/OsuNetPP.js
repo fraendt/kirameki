@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class OsuNetPP {
     constructor() {
@@ -101,4 +101,4 @@ class OsuNetPP {
     }
 }
 
-module.exports = new OsuNetPP();
+export default new OsuNetPP();

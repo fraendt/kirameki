@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class SlotMachine {
     constructor() {
@@ -73,4 +73,4 @@ class SlotMachine {
     }
 }
 
-module.exports = new SlotMachine();
+export default new SlotMachine();

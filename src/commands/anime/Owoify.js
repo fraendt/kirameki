@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class Owoify {
     constructor() {
@@ -25,4 +25,4 @@ class Owoify {
     }
 }
 
-module.exports = new Owoify();
+export default new Owoify();

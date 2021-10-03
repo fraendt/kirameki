@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class Restart {
     constructor() {
@@ -24,4 +24,4 @@ class Restart {
     }
 }
 
-module.exports = new Restart();
+export default new Restart();

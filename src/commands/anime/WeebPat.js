@@ -1,5 +1,5 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const juration = require('juration');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import juration from 'juration';
 
 class WeebPat {
     constructor() {
@@ -89,4 +89,4 @@ class WeebPat {
     }
 }
 
-module.exports = new WeebPat();
+export default new WeebPat();

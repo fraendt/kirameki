@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class CommandClassName {
     constructor() {
@@ -30,4 +30,4 @@ class CommandClassName {
     }
 }
 
-module.exports = new CommandClassName();
+export default new CommandClassName();

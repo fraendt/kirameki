@@ -1,5 +1,5 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const validUrl = require('valid-url');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import validUrl from 'valid-url';
 
 class AddMeme {
     constructor() {
@@ -58,4 +58,4 @@ class AddMeme {
     }
 }
 
-module.exports = new AddMeme();
+export default new AddMeme();

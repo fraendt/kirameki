@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class Mascot {
     constructor() {
@@ -22,4 +22,4 @@ class Mascot {
     }
 }
 
-module.exports = new Mascot();
+export default new Mascot();

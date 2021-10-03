@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class Dankify {
     constructor() {
@@ -44,4 +44,4 @@ class Dankify {
     }
 }
 
-module.exports = new Dankify();
+export default new Dankify();

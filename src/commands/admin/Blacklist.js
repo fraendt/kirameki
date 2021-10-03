@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class Blacklist {
     constructor() {
@@ -106,4 +106,4 @@ class Blacklist {
     }
 }
 
-module.exports = new Blacklist();
+export default new Blacklist();

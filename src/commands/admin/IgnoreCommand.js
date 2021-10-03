@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class IgnoreCommand {
     constructor() {
@@ -106,4 +106,4 @@ class IgnoreCommand {
     }
 }
 
-module.exports = new IgnoreCommand();
+export default new IgnoreCommand();

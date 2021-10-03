@@ -1,5 +1,5 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const moment = require('moment-timezone');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import moment from 'moment-timezone';
 
 class KiramekiStatus {
     constructor() {
@@ -52,4 +52,4 @@ class KiramekiStatus {
     }
 }
 
-module.exports = new KiramekiStatus();
+export default new KiramekiStatus();

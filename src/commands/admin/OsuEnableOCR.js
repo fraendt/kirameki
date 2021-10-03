@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class OsuEnableOCR {
     constructor() {
@@ -69,4 +69,4 @@ class OsuEnableOCR {
     }
 }
 
-module.exports = new OsuEnableOCR();
+export default new OsuEnableOCR();

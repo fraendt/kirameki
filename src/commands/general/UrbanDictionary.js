@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class UrbanDictionary {
     constructor() {
@@ -47,4 +47,4 @@ class UrbanDictionary {
     }
 }
 
-module.exports = new UrbanDictionary();
+export default new UrbanDictionary();

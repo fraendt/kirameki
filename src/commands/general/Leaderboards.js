@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class Leaderboards {
     constructor() {
@@ -99,4 +99,4 @@ class Leaderboards {
     }
 }
 
-module.exports = new Leaderboards();
+export default new Leaderboards();

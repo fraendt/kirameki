@@ -1,6 +1,6 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const KiramekiConfig = require('../../../config/KiramekiConfig');
-const fnClient = require('fortnite');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import KiramekiConfig from '../../../config/KiramekiConfig.js';
+import fnClient from 'fortnite';
 
 class Fortnite {
     constructor() {
@@ -115,4 +115,4 @@ class Fortnite {
     }
 }
 
-module.exports = new Fortnite();
+export default new Fortnite();

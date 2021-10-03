@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class Poll {
     constructor() {
@@ -40,4 +40,4 @@ class Poll {
     }
 }
 
-module.exports = new Poll();
+export default new Poll();

@@ -1,6 +1,6 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const uniqid = require('uniqid');
-const Canvas = require('canvas');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import uniqid from 'uniqid';
+import Canvas from 'canvas';
 
 class Profile {
     constructor() {
@@ -242,4 +242,4 @@ class Profile {
     }
 }
 
-module.exports = new Profile();
+export default new Profile();

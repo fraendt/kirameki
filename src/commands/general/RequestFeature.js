@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class RequestFeature {
     constructor() {
@@ -49,4 +49,4 @@ class RequestFeature {
     }
 }
 
-module.exports = new RequestFeature();
+export default new RequestFeature();

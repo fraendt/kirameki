@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class Roll {
     constructor() {
@@ -25,4 +25,4 @@ class Roll {
     }
 }
 
-module.exports = new Roll();
+export default new Roll();

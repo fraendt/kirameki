@@ -1,5 +1,5 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const juration = require('juration');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import juration from 'juration';
 
 class Uptime {
     constructor() {
@@ -26,4 +26,4 @@ class Uptime {
     }
 }
 
-module.exports = new Uptime();
+export default new Uptime();

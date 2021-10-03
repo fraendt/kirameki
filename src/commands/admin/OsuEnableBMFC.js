@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class OsuEnableBMFC {
     constructor() {
@@ -69,4 +69,4 @@ class OsuEnableBMFC {
     }
 }
 
-module.exports = new OsuEnableBMFC();
+export default new OsuEnableBMFC();

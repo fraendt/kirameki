@@ -1,5 +1,5 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const KiramekiConfig = require('../../../config/KiramekiConfig');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import KiramekiConfig from '../../../config/KiramekiConfig.js';
 
 class SetStatus {
     constructor() {
@@ -55,4 +55,4 @@ class SetStatus {
     }
 }
 
-module.exports = new SetStatus();
+export default new SetStatus();

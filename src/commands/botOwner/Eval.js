@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class Eval {
     constructor() {
@@ -32,4 +32,4 @@ class Eval {
     }
 }
 
-module.exports = new Eval();
+export default new Eval();

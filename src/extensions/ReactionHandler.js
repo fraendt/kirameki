@@ -1,4 +1,4 @@
-const EventEmitter = require('eventemitter3');
+import EventEmitter from 'eventemitter3';
 
 class ReactionHandler extends EventEmitter {
     constructor(message, filter, options = {}) {
@@ -54,7 +54,8 @@ class ReactionHandler extends EventEmitter {
     }
 }
 
-module.exports = {
+// module.exports = {
+export default {
     continuousReactionStream: ReactionHandler,
     collectReactions: (message, filter, options) => {
         const collector = new ReactionHandler(message, filter, options);

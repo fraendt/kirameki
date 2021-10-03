@@ -1,5 +1,5 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const KiramekiConfig = require('../../../config/KiramekiConfig');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import KiramekiConfig from '../../../config/KiramekiConfig.js';
 
 class MuteHandler {
     constructor() {
@@ -100,4 +100,4 @@ class MuteHandler {
     }
 }
 
-module.exports = new MuteHandler();
+export default new MuteHandler();

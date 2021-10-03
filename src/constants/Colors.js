@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     DEFAULT: 0xFF9185,
     OSU: 0xF06DA8,
     WHITE: 0xFFFFFF,

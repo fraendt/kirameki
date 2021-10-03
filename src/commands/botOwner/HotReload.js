@@ -1,6 +1,6 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const KiramekiConfig = require('../../../config/KiramekiConfig');
-const chalk = require('chalk');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import KiramekiConfig from '../../../config/KiramekiConfig.js';
+import chalk from 'chalk';
 
 class HotReload {
 	constructor() {
@@ -32,4 +32,4 @@ class HotReload {
 	}
 }
 
-module.exports = new HotReload();
+export default new HotReload();

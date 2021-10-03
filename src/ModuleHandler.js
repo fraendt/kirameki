@@ -1,4 +1,4 @@
-const KiramekiHelper = require('./KiramekiHelper');
+import KiramekiHelper from './KiramekiHelper.js';
 
 class ModuleHandler {
     constructor(kirCore) {
@@ -47,4 +47,6 @@ class ModuleHandler {
     }
 }
 
-module.exports = ModuleHandler;
+// module.exports = ModuleHandler;
+
+export default ModuleHandler;

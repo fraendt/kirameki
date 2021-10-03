@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class ChannelHandler {
     constructor() {
@@ -80,4 +80,4 @@ class ChannelHandler {
     }
 }
 
-module.exports = new ChannelHandler();
+export default new ChannelHandler();

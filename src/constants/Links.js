@@ -1,4 +1,5 @@
-module.exports = {
+// module.exports = {
+export default {
     INVITE: 'https://discord.gg/kKPZdA6',
     SOURCE: {
         REPOSITORY: {

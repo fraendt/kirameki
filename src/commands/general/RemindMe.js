@@ -1,5 +1,5 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const juration = require('juration');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import juration from 'juration';
 
 class RemindMe {
     constructor() {
@@ -88,4 +88,4 @@ class RemindMe {
     }
 }
 
-module.exports = new RemindMe();
+export default new RemindMe();

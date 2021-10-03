@@ -1,5 +1,5 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const countryNames = require('countrynames');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import countrynames from 'countrynames';
 
 class OsuTop {
     constructor() {
@@ -249,4 +249,4 @@ class OsuTop {
     }
 }
 
-module.exports = new OsuTop();
+export default new OsuTop();

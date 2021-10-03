@@ -1,5 +1,5 @@
-const KiramekiHelper    = require('../../KiramekiHelper');
-const ojsama            = require("ojsama");
+import KiramekiHelper from '../../KiramekiHelper.js';
+import ojsama from "ojsama";
 
 class OsuBeatmapFlashcards {
     constructor() {
@@ -127,4 +127,4 @@ class OsuBeatmapFlashcards {
     }
 }   
 
-module.exports = new OsuBeatmapFlashcards();
+export default new OsuBeatmapFlashcards();

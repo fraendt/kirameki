@@ -1,6 +1,6 @@
-const KiramekiHelper = require('./KiramekiHelper');
-const Eris           = require('eris');
-const juration       = require('juration');
+import KiramekiHelper from './KiramekiHelper.js';
+import Eris from 'eris';
+import juration from 'juration';
 
 class MessageHandler {
     constructor(kirCore) {
@@ -15,13 +15,17 @@ class MessageHandler {
      * @param {object} commands An Eris collection containing all loaded commands
      */
     async handle(message, commands) {
+        KiramekiHelper.log(KiramekiHelper.LogLevel.ERROR, "handling")
+        console.log('in message handler')
         const commandArguments  = message.content.slice(this.kirCore.prefix.length).split(/ +/);
         const commandName       = commandArguments.shift().toLowerCase();
+        KiramekiHelper.log(KiramekiHelper.LogLevel.ERROR, "fuck"+message)
         const command           = commands.get(commandName) || commands.find(kirCommand => kirCommand.aliases && kirCommand.aliases.includes(commandName));
 
         // Stop handling if no registered command was found
         if (!command) return;
-
+        
+        KiramekiHelper.log(KiramekiHelper.LogLevel.ERROR, message)
         // Check if the channel is currently being ignored
         const isChannelIgnored = await KiramekiHelper.preparedQuery(this.kirCore.DB, 'SELECT * FROM ignored_channels WHERE channel_id = ?;', [message.channel.id]);
         
@@ -33,7 +37,9 @@ class MessageHandler {
         if ((isCommandIgnoredInChannel.length > 0) && !message.member.permission.has('administrator')) return;
 
         // Check if the user is banned from using Kirameki
+        console.log("checking if user is banned....");
         const isBanned = await KiramekiHelper.preparedQuery(this.kirCore.DB, 'SELECT * FROM banned WHERE user_id = ? LIMIT 1;', [message.author.id]);
+        console.log("banned: " + isBanned);
 
         if (isBanned.length > 0) {
             return message.channel.createEmbed(new KiramekiHelper.Embed()
@@ -135,4 +141,6 @@ class MessageHandler {
     }
 }
 
-module.exports = MessageHandler;
+// module.exports = MessageHandler;
+
+export default MessageHandler;

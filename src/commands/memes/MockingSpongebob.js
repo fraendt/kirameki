@@ -1,6 +1,6 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const Canvas = require('canvas');
-const uniqid = require('uniqid');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import Canvas from 'canvas';
+import uniqid from 'uniqid';
 
 class MockingSpongebob {
     constructor() {
@@ -71,4 +71,4 @@ class MockingSpongebob {
     }
 }
 
-module.exports = new MockingSpongebob();
+export default new MockingSpongebob();

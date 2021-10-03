@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class LetMeGoogleThatForYou {
     constructor() {
@@ -30,4 +30,4 @@ class LetMeGoogleThatForYou {
     }
 }
 
-module.exports = new LetMeGoogleThatForYou();
+export default new LetMeGoogleThatForYou();

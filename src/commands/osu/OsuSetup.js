@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class OsuSetup {
     constructor() {
@@ -79,4 +79,4 @@ class OsuSetup {
     }
 }
 
-module.exports = new OsuSetup();
+export default new OsuSetup();

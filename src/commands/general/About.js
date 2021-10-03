@@ -1,5 +1,5 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const juration = require('juration');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import juration from 'juration';
 
 class About {
     constructor() {
@@ -40,4 +40,4 @@ class About {
     }
 }
 
-module.exports = new About();
+export default new About();

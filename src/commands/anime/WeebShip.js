@@ -1,6 +1,6 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const uniqid = require('uniqid');
-const Canvas = require('canvas');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import Canvas from 'canvas';
+import uniqid from 'uniqid';
 
 class WeebShip {
     constructor() {
@@ -146,4 +146,4 @@ class WeebShip {
     }
 }
 
-module.exports = new WeebShip();
+export default new WeebShip();

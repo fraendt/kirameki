@@ -1,6 +1,6 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const axios = require('axios');
-const isoConv = require('iso-language-converter');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import axios from 'axios';
+import isoConv from 'iso-language-converter';
 
 class Wikipedia {
     constructor() {
@@ -66,4 +66,4 @@ class Wikipedia {
     }
 }
 
-module.exports = new Wikipedia();
+export default new Wikipedia();

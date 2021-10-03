@@ -1,6 +1,6 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const Canvas = require('canvas');
-const uniqid = require('uniqid');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import Canvas from 'canvas';
+import uniqid from 'uniqid';
 
 class Kaede {
     constructor() {
@@ -45,4 +45,4 @@ class Kaede {
     }
 }
 
-module.exports = new Kaede();
+export default new Kaede();

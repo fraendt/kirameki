@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     OSU_LOGO: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Osulogo.png/286px-Osulogo.png',
     OSU_PIPPI_SAD: 'https://i.imgur.com/Wa00gFg.png',
     OSU_STRAIN_GRAPH_BACKGROUND: 'https://img.kirameki.one/IizpW6sj.jpg',

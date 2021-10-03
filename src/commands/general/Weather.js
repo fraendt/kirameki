@@ -1,8 +1,8 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const KiramekiConfig = require('../../../config/KiramekiConfig');
-const moment = require('moment-timezone');
-const countrynames = require('countrynames');
-const axios = require('axios');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import KiramekiConfig from '../../../config/KiramekiConfig.js';
+import moment from 'moment-timezone';
+import countrynames from 'countrynames';
+import axios from 'axios';
 
 class Weather {
     constructor() {
@@ -100,4 +100,4 @@ class Weather {
     }
 }
 
-module.exports = new Weather();
+export default new Weather();

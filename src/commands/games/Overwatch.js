@@ -1,5 +1,5 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const owapi = require('owapi');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import owapi from 'owapi';
 
 class Overwatch {
     constructor() {
@@ -83,4 +83,4 @@ class Overwatch {
     }
 }
 
-module.exports = new Overwatch();
+export default new Overwatch();

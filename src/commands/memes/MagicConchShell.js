@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class MagicConchShell {
     constructor() {
@@ -36,4 +36,4 @@ class MagicConchShell {
     }
 }
 
-module.exports = new MagicConchShell();
+export default new MagicConchShell();

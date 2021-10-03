@@ -1,7 +1,7 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const pokemon = require('pokemon');
-const pokemonGif = require('pokemon-gif');
-const isoConv = require('iso-language-converter');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import pokemon from 'pokemon';
+import pokemonGif from 'pokemon-gif';
+import isoConv from 'iso-language-converter';
 
 class PokemonTranslate {
     constructor() {
@@ -74,4 +74,4 @@ class PokemonTranslate {
     }
 }
 
-module.exports = new PokemonTranslate();
+export default new PokemonTranslate();

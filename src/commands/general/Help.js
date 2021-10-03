@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class Help {
     constructor() {
@@ -16,6 +16,7 @@ class Help {
         const [command, helpCommand] = KiramekiHelper.tailedArgs(message.content, ' ', 1);
 
         if (!helpCommand) {
+            console.log(message.channel)
             return message.channel.createEmbed(new KiramekiHelper.Embed()
                 .setColor('DEFAULT')
                 .setAuthor('Kirameki Help', KiramekiHelper.images.KIRAMEKI_MASCOT)
@@ -64,4 +65,4 @@ class Help {
     }
 }
 
-module.exports = new Help();
+export default new Help();

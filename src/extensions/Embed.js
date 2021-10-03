@@ -1,4 +1,4 @@
-const Colors = require('./../constants/Colors');
+import * as Colors from './../constants/Colors.js';
 
 class Embed {
     constructor(data = {}) {
@@ -96,4 +96,5 @@ class Embed {
     }
 }
 
-module.exports = Embed;
+// module.exports = Embed;
+export default Embed;

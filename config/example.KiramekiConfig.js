@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     prefix: "",
     token: "",
     weebSHApiKey: "",
@@ -13,11 +13,11 @@ module.exports = {
     userAgent: "",
     debug: true,
     mysqlOptions: {
-        host: '',
-        user: '',
-        password: '',
-        database: '',
-        charset: ''
+        host: 'kirameki_mariadb_1',
+        user: 'kirameki',
+        password: 'kiramekipassword',
+        database: 'mysql',
+        charset: 'utf8'
     },
     erisOptions: {}
 }

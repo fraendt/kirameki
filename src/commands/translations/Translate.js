@@ -1,7 +1,7 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const KiramekiConfig = require('../../../config/KiramekiConfig');
-const translate = require('translate');
-const isoConv = require('iso-language-converter');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import KiramekiConfig from '../../../config/KiramekiConfig.js';
+import translate from 'translate';
+import isoConv from 'iso-language-converter';
 
 class Translate {
     constructor() {
@@ -57,4 +57,4 @@ class Translate {
     }
 }
 
-module.exports = new Translate();
+export default new Translate();

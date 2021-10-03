@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class OsuBan {
     constructor() {
@@ -39,4 +39,4 @@ class OsuBan {
     }
 }
 
-module.exports = new OsuBan();
+export default new OsuBan();

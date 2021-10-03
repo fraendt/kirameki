@@ -1,6 +1,6 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const Canvas = require('canvas');
-const uniqid = require('uniqid');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import Canvas from 'canvas';
+import uniqid from 'uniqid';
 
 class Sagiri {
     constructor() {
@@ -46,4 +46,4 @@ class Sagiri {
     }
 }
 
-module.exports = new Sagiri();
+export default new Sagiri();

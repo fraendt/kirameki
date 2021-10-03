@@ -1,4 +1,5 @@
-module.exports = {
+// module.exports = {
+export default {
     LEAGUE_OF_LEGENDS: {
         MAP_MODE_DATA: {
             0: {

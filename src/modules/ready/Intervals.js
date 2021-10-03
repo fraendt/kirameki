@@ -1,7 +1,7 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const KiramekiConfig = require('../../../config/KiramekiConfig');
-const https = require('https');
-const axios = require('axios');
+import KiramekiHelper from '../../KiramekiHelper.js';
+import KiramekiConfig from '../../../config/KiramekiConfig.js';
+import https from 'https';
+import axios from 'axios';
 class Intervals {
     constructor() {
         this.name = 'intervals';
@@ -44,4 +44,4 @@ class Intervals {
     }
 }
 
-module.exports = new Intervals();
+export default new Intervals();

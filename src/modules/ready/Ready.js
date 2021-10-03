@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class Ready {
     constructor() {
@@ -12,4 +12,4 @@ class Ready {
     }
 }
 
-module.exports = new Ready();
+export default new Ready();

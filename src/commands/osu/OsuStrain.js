@@ -1,7 +1,8 @@
-const KiramekiHelper = require('../../KiramekiHelper');
-const ChartjsNode = require('chartjs-node');
-const uniqid = require('uniqid');
-const Canvas = require('canvas');
+import KiramekiHelper from '../../KiramekiHelper.js';
+// import ChartjsNode from 'chartjs-node';
+import uniqid from 'uniqid';
+import Canvas from 'canvas';
+const ChartjsNode = null;
 
 class OsuStrain {
     constructor() {
@@ -133,4 +134,4 @@ class OsuStrain {
     }
 }
 
-module.exports = new OsuStrain();
+export default new OsuStrain();

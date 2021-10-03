@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     OSU: 'osu!',
     GAMES: 'Game Profile Commands',
     GENERAL: 'Useful & Miscellaneous',

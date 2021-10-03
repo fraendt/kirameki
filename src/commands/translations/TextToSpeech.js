@@ -1,4 +1,4 @@
-const KiramekiHelper = require('../../KiramekiHelper');
+import KiramekiHelper from '../../KiramekiHelper.js';
 
 class TextToSpeech {
     constructor() {
@@ -31,4 +31,4 @@ class TextToSpeech {
     }
 }
 
-module.exports = new TextToSpeech();
+export default new TextToSpeech();
