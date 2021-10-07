@@ -11,7 +11,8 @@ import chalk from 'chalk';
 import fs from 'fs';
 import fetch from 'node-fetch';
 import Embed from './extensions/Embed.js';
-import * as ojsama from './extensions/OjsamaPlus.js';
+//import * as OjsamaPlus from './extensions/OjsamaPlus.js';
+import ojsama from 'ojsama';
 import md5  from 'md5';
 import Taihou from 'taihou';
 import ud from 'urban';
@@ -19,6 +20,8 @@ import cheerio from 'cheerio';
 import axios from 'axios';
 import tesseract from 'node-tesseract';
 import uniqid from 'uniqid';
+import path from 'path';
+const __dirname = path.resolve();
 
 /**
  * Helper class for Kirameki.
@@ -813,7 +816,7 @@ class KiramekiHelper {
      * @returns {string} A beatmap's metadata 
      */
     async obtainAndCacheOsuFile(beatmapID) {
-        const osuFile = `${__dirname}/../beatmaps/${beatmapID}.osu`;
+	const osuFile = `${__dirname}/../beatmaps/${beatmapID}.osu`;
 
         if (fs.existsSync(osuFile)) {
             const result = fs.readFileSync(osuFile, 'utf8');
@@ -986,15 +989,11 @@ class KiramekiHelper {
      */
     preparedQuery(database, userQuery, bindings) {
         return new Promise((resolve, reject) => {
-            console.log("db query promise start")
-            console.log(userQuery)
-            console.log(bindings)
             database.query(userQuery, bindings, (error, results, field) => {
                 if (error) {
                     console.log(error);
                     reject(error);
                 }
-                console.log("resolved promise")
                 resolve(results);
             });
         });

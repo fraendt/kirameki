@@ -14,12 +14,7 @@ class BirthdaySystem {
         if (message.content.startsWith(kirCore.prefix)) return;
         if (message.content == kirCore.prefix) return;
         if (kirCore.eligibleForXp.has(message.author.id)) return;
-
-        console.log('birthday')
-        // console.log(kirCore.DB)
-        console.log(message.author.id)
         const isBanned = await KiramekiHelper.preparedQuery(kirCore.DB, 'SELECT * FROM banned WHERE user_id = ? LIMIT 1;', [message.author.id]);
-        console.log('resolved: ' + isBanned)
         // Immediately abort if a user is banned from using Kirameki
         if (isBanned.length > 0) return;
 

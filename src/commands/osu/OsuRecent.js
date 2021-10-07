@@ -86,9 +86,8 @@ class OsuRecent {
             const beatmapRender         = userRecentScore[0].artist + " - " + userRecentScore[0].title + " [" + userRecentScore[0].version + "]";
             const mostRecentDiffIcon    = KiramekiHelper.emojis.OSU.DIFFICULTIES[KiramekiHelper.getOsuDiffIconDesc(parseFloat(userRecentScore[0].difficultyrating))];
             const beatmapData           = await KiramekiHelper.obtainAndCacheOsuFile(mostRecentBMID);
-
             let beatmapParser   = new ojsama.parser();
-                beatmapParser.feed(beatmapData);
+		beatmapParser.feed(beatmapData);
             let beatmapMap      = beatmapParser.map;
             let enabledMods     = parseInt(userRecentResults[0].enabled_mods);
             let beatmapStars    = new ojsama.diff().calc({ map: beatmapMap, mods: enabledMods });

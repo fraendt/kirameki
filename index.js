@@ -8,35 +8,15 @@ import * as nodesu         from 'nodesu';
 import read from 'fs-readdir-recursive';
 
 import KiramekiConfig from './config/KiramekiConfig.js';
-// 
-// console.log(ErisBasic)
-// Object.keys(ErisBasic).map((v) => console.log(v))
 import ErisBase from 'eris';
 import * as ErisBasic from 'eris';
 
-// help
 Object.keys(ErisBasic).forEach((val) => (ErisBase[val] = ErisBasic[val]))
-
-// console.log(ErisBase)
-// console.log(ErisBasic)
-// console.log(Object.keys(ErisBasic))
-// Object.keys(ErisBasic).map((v) => console.log(v))
-
-
-
-// import ErisAdditions from 'eris-additions';
-// console.log(ErisAdditions)
-// const Eris = ErisAdditions(ErisBase);
-// console.log(Eris)
-
 const Eris = ErisBasic;
 const erisadditions = import("eris-additions")
 const ea = await erisadditions;
-console.log(ea)
-console.log(ea.default)
 ea.default(Eris);
 
-console.log('passed import')
 
 /*
 const KiramekiConfig    = require('./config/KiramekiConfig');
@@ -80,16 +60,9 @@ class Kirameki extends Eris.Client {
         this.prefix         = KiramekiConfig.prefix;
         this.commandFiles   = read('./src/commands').filter(file => file.endsWith('.js'));
         this.moduleFiles    = read('./src/modules').filter(file => file.endsWith('.js'));
-        console.log(KiramekiConfig.mysqlOptions);
         this.DB             = mysql.createConnection(KiramekiConfig.mysqlOptions);
 
         this.DB.connect(this._initKiramekiDatabase);
-        // let c = KiramekiHelper.preparedQuery(this.DB, "SELECT * FROM banned WHERE user_id = ? LIMIT 1;", ["574623939557589002"])
-        // console.log(c)
-        // c.then(val => console.log(val))
-        // KiramekiHelper.preparedQuery(this.DB, "SELECT * FROM mute WHERE discord_id = ? AND guild_id = ?;", [ '574623939557589002', '846052208701472849' ]).then(v => console.log(v))
-        // KiramekiHelper.preparedQuery(this.DB, "SELECT * FROM osu_bmlink_cards WHERE channel_id = ?;", [ '846052209161666603' ]).then(v => console.log(v))
-        // KiramekiHelper.preparedQuery(this.DB, "SELECT * FROM osu_channel_ocr WHERE channel_id = ?;", [ '846052209161666603' ]).then(v => console.log(v))
 
         this._addEventListeners();
         this._registerKiramekiCommands();
@@ -174,17 +147,11 @@ class Kirameki extends Eris.Client {
             if (message.channel.type !== 0) return;
             if (message.author.bot) return;
             
-            // console.log("author: "+message.author.id);
-            // console.log("guild: "+message.channel.guild.id);
-            // console.log("start query");
             const isMuted = await KiramekiHelper.preparedQuery(this.DB, 'SELECT * FROM mute WHERE discord_id = ? AND guild_id = ?;', [message.author.id, message.channel.guild.id]);
-            console.log("query success");
-            console.log(isMuted);
             if (isMuted.length > 0) return message.delete();
             if (!message.content.startsWith(this.prefix)) return;
             if (message.content === this.prefix) return;
             
-            console.log('doin the handling')
             this.messageHandler.handle(message, this.commands);
         } catch (messageListenerError) {
             KiramekiHelper.log(KiramekiHelper.LogLevel.ERROR, "MESSAGE LISTENER ERROR", `A message couldn't be processed because of: ${messageListenerError}`);
