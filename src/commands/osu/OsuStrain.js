@@ -1,8 +1,8 @@
 import KiramekiHelper from '../../KiramekiHelper.js';
-// import ChartjsNode from 'chartjs-node';
+import { ChartJSNodeCanvas } from 'chartjs-node-canvas';
 import uniqid from 'uniqid';
 import Canvas from 'canvas';
-const ChartjsNode = null;
+// const ChartjsNode = null;
 
 class OsuStrain {
     constructor() {
@@ -48,7 +48,7 @@ class OsuStrain {
             }
         }
 
-        const chartNode             = new ChartjsNode(800, 450);
+        const chartNode             = new ChartJSNodeCanvas({width: 800, height: 450});
         const beatmapOsuFile        = await KiramekiHelper.obtainAndCacheOsuFile(beatmapID);
         const beatmapStrainObject   = KiramekiHelper.getBeatmapStrain(beatmapOsuFile, strainMods);
         const modStringParsed       = (KiramekiHelper.numberToMod(strainMods).length) ? `+${KiramekiHelper.numberToMod(strainMods).join(',')}` : '';
