@@ -2,7 +2,7 @@ import KiramekiHelper from '../../KiramekiHelper.js';
 import { ChartJSNodeCanvas } from 'chartjs-node-canvas';
 import uniqid from 'uniqid';
 import Canvas from 'canvas';
-// const ChartjsNode = null;
+
 
 class OsuStrain {
     constructor() {
@@ -51,6 +51,7 @@ class OsuStrain {
         const chartNode             = new ChartJSNodeCanvas({width: 800, height: 450});
         const beatmapOsuFile        = await KiramekiHelper.obtainAndCacheOsuFile(beatmapID);
         const beatmapStrainObject   = KiramekiHelper.getBeatmapStrain(beatmapOsuFile, strainMods);
+	console.log(beatmapStrainObject);
         const modStringParsed       = (KiramekiHelper.numberToMod(strainMods).length) ? `+${KiramekiHelper.numberToMod(strainMods).join(',')}` : '';
         const graphingOptions       = {
             type: 'line',
@@ -82,28 +83,27 @@ class OsuStrain {
                 ]
             },
             options: {
-                plugins: {
-                    title: {
-                        display: true,
+                title: {
+                    display: true,
+                    fontColor: '#d2d9dc',
+                    fontSize: 18,
+                    padding: 20,
+                    text: `${beatmapStrainObject.map.artist} - ${beatmapStrainObject.map.title} [${beatmapStrainObject.map.version}] ${modStringParsed}`
+                },
+                legend: {
+                    labels: {
                         fontColor: '#d2d9dc',
-                        fontSize: 18,
-                        padding: 20,
-                        text: `${beatmapStrainObject.map.artist} - ${beatmapStrainObject.map.title} [${beatmapStrainObject.map.version}] ${modStringParsed}`
-                    },
-                    legend: {
-                        labels: {
-                            fontColor: '#d2d9dc',
-                            fontSize: 16
-                        }
+                        fontSize: 16
                     }
                 }
             }
         }
+	
+	const graphBuffer = await chartNode.renderToBuffer(graphingOptions);
+        // const graphInstance = await chartNode.drawChart(graphingOptions);
+        // const graphBuffer   = await chartNode.getImageBuffer('image/png');
 
-        const graphInstance = await chartNode.drawChart(graphingOptions);
-        const graphBuffer   = await chartNode.getImageBuffer('image/png');
-
-        chartNode.destroy();
+        // chartNode.destroy();
 
         const modCanvas     = Canvas.createCanvas(800, 450);
         const ctx           = modCanvas.getContext('2d');
@@ -112,7 +112,8 @@ class OsuStrain {
         let bgImage;
 
         try {
-            bgImage = await Canvas.loadImage(`https://assets.ppy.sh/beatmaps/${beatmapStrainObject.map.beatmap_set_id}/covers/cover.jpg`); 
+	    console.log(`https://assets.ppy.sh/beatmaps/${beatmapStrainObject.map.beatmapsetId}/covers/cover.jpg`)
+            bgImage = await Canvas.loadImage(`https://assets.ppy.sh/beatmaps/${beatmapStrainObject.map.beatmapsetId}/covers/cover.jpg`); 
         } catch (e) {
             bgImage = await Canvas.loadImage(KiramekiHelper.images.OSU_STRAIN_GRAPH_BACKGROUND);
         }
@@ -137,3 +138,4 @@ class OsuStrain {
 }
 
 export default new OsuStrain();
+

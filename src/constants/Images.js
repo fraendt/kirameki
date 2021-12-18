@@ -1,7 +1,7 @@
 export default {
     OSU_LOGO: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Osulogo.png/286px-Osulogo.png',
     OSU_PIPPI_SAD: 'https://i.imgur.com/Wa00gFg.png',
-    OSU_STRAIN_GRAPH_BACKGROUND: 'https://img.kirameki.one/IizpW6sj.jpg',
+    OSU_STRAIN_GRAPH_BACKGROUND: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Osulogo.png/286px-Osulogo.png',
     DEFAULT_DISCORD: 'https://img.kirameki.one/tJIX0aeZ.png',
     LEVEL_UP_OVERLAY: 'https://img.kirameki.one/9XzqmSAt.png',
     KIRAMEKI_MASCOT: 'https://img.kirameki.one/AchEKt3g.png',
