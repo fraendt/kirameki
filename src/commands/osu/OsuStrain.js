@@ -83,17 +83,19 @@ class OsuStrain {
                 ]
             },
             options: {
-                title: {
-                    display: true,
-                    fontColor: '#d2d9dc',
-                    fontSize: 18,
-                    padding: 20,
-                    text: `${beatmapStrainObject.map.artist} - ${beatmapStrainObject.map.title} [${beatmapStrainObject.map.version}] ${modStringParsed}`
-                },
-                legend: {
-                    labels: {
+                plugins: {
+                    title: {
+                        display: true,
                         fontColor: '#d2d9dc',
-                        fontSize: 16
+                        fontSize: 18,
+                        padding: 20,
+                        text: `${beatmapStrainObject.map.artist} - ${beatmapStrainObject.map.title} [${beatmapStrainObject.map.version}] ${modStringParsed}`
+                    },
+                    legend: {
+                        labels: {
+                            fontColor: '#d2d9dc',
+                            fontSize: 16
+                        }
                     }
                 }
             }
