@@ -51,7 +51,6 @@ class OsuStrain {
         const chartNode             = new ChartJSNodeCanvas({width: 800, height: 450});
         const beatmapOsuFile        = await KiramekiHelper.obtainAndCacheOsuFile(beatmapID);
         const beatmapStrainObject   = KiramekiHelper.getBeatmapStrain(beatmapOsuFile, strainMods);
-	console.log(beatmapStrainObject);
         const modStringParsed       = (KiramekiHelper.numberToMod(strainMods).length) ? `+${KiramekiHelper.numberToMod(strainMods).join(',')}` : '';
         const graphingOptions       = {
             type: 'line',
@@ -104,8 +103,8 @@ class OsuStrain {
                 }
             }
         }
-	
-	const graphBuffer = await chartNode.renderToBuffer(graphingOptions);
+        console.log(`${beatmapStrainObject.map.artist} - ${beatmapStrainObject.map.title} [${beatmapStrainObject.map.version}] ${modStringParsed}`);
+        const graphBuffer = await chartNode.renderToBuffer(graphingOptions);
         // const graphInstance = await chartNode.drawChart(graphingOptions);
         // const graphBuffer   = await chartNode.getImageBuffer('image/png');
 
@@ -118,7 +117,6 @@ class OsuStrain {
         let bgImage;
 
         try {
-	    console.log(`https://assets.ppy.sh/beatmaps/${beatmapStrainObject.map.beatmapsetId}/covers/cover.jpg`)
             bgImage = await Canvas.loadImage(`https://assets.ppy.sh/beatmaps/${beatmapStrainObject.map.beatmapsetId}/covers/cover.jpg`); 
         } catch (e) {
             bgImage = await Canvas.loadImage(KiramekiHelper.images.OSU_STRAIN_GRAPH_BACKGROUND);
